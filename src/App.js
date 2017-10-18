@@ -1,8 +1,10 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import logo from './logo.svg';
+import TodoPage from './todolist/todo/TodoPage.jsx';
+
 import styles from './App.css';
 
-class App extends Component {
+class App extends PureComponent {
   render() {
     return (
       <div className={styles.App}>
@@ -13,6 +15,7 @@ class App extends Component {
         <p className={styles.intro}>
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
+        <TodoPage />
       </div>
     );
   }
