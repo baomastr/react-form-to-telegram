@@ -1,9 +1,13 @@
-import React, {Component} from 'react';
+import React, {PureComponent} from 'react';
+import Form from '../Form/FormPage.jsx'
 
-class HomePage extends Component {
+class HomePage extends PureComponent {
     render() {
         return (
-            <div>test</div>
+            <div>
+                test
+                <Form />
+            </div>
         );
     }
 }
