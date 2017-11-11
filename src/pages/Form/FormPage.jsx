@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import TelegramBotService from "../../services/telegram-bot-service.js";
 
+const Serivce = new TelegramBotService();
 class FormPage extends Component {
     constructor(props) {
         super(props);
@@ -15,6 +17,8 @@ class FormPage extends Component {
         console.log(`${this.state.login}, добро пожаловать!`);
         console.log(`Сообщение \n "${this.state.message}" \n успешно отправлено получателю "${this.state.recipient}"`);
         event.preventDefault();
+
+        Serivce.sendMessage({id:'@reactbottest', msg: JSON.stringify(this.state)});
     }
 
     onLoginChange(e) {
