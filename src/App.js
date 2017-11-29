@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import HomePage from './pages/HomePage/HomePage.jsx'
+import HomePage from './pages/HomePage/HomePage.jsx';
 import logo from './logo.svg';
 import styles from './App.css';
 
