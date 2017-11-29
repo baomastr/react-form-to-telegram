@@ -2,7 +2,7 @@
   "name": "post-css",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://baomastr.github.io/create-react-postcss-app",
+  "homepage": "https://baomastr.github.io/react-form-to-telegram",
   "dependencies": {
     "autoprefixer": "7.1.2",
     "babel-core": "6.25.0",
