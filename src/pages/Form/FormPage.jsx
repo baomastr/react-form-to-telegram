@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import React, { PureComponent } from 'react';
 import TextField from 'material-ui/TextField';
 import TelegramBotService from "../../services/telegram-bot-service.js";
 
 const Serivce = new TelegramBotService();
-class FormPage extends Component {
+class FormPage extends PureComponent {
     constructor(props) {
         super(props);
         this.state = {login: '', recipient: '', message: ''};
@@ -38,35 +38,37 @@ class FormPage extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit}>
-                    <p>
+                    <div>
                         <TextField
-                            hintText="Логин"
-                            type="text"
+                            floatingLabelText="Логин"
+                            hintText="Введите Ваш логин"
                             name="login"
                             value={this.state.login}
                             onChange={this.onLoginChange}
                         />
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <TextField
-                            hintText="Получатель"
-                            type="text"
+                            floatingLabelText="Получатель"
+                            hintText="Введите получателя"
                             name="recipient"
                             value={this.state.recipient}
                             onChange={this.onRecipientChange}
                         />
-                    </p>
-                    <p>
+                    </div>
+                    <div>
                         <TextField
-                            hintText="Текст сообщения"
-                            type="text"
+                            floatingLabelText="Сообщение"
+                            /*floatingLabelFixed={true}*/
+                            hintText="Введите текст сообщения"
                             name="message"
                             value={this.state.message}
                             onChange={this.onMessageChange}
-                            multiLine={true}
+                            /*multiLine={true}*/
+                            /*rows={2}*/
                         />
-                    </p>
-                    <p><input type="submit" value="Submit"/></p>
+                    </div>
+                    <div><input type="submit" value="Submit"/></div>
                 </form>
             </div>
         );
