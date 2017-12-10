@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import TextField from 'material-ui/TextField';
+import RaisedButton from 'material-ui/RaisedButton';
 import TelegramBotService from "../../services/telegram-bot-service.js";
 
 const Serivce = new TelegramBotService();
@@ -68,7 +69,9 @@ class FormPage extends PureComponent {
                             /*rows={2}*/
                         />
                     </div>
-                    <div><input type="submit" value="Submit"/></div>
+                    <div>
+                        <RaisedButton type="submit" label="Отправить" />
+                    </div>
                 </form>
             </div>
         );
