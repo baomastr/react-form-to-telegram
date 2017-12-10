@@ -1,21 +1,16 @@
-import React, {Component} from 'react';
-import HomePage from './pages/HomePage/HomePage.jsx';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import HomePage from './pages/HomePage/HomePage.jsx'
 import styles from './App.css';
 
 class App extends Component {
     render() {
         return (
-            <div className={styles.App}>
-                <header className={styles.header}>
-                    <img src={logo} className={styles.logo} alt="logo"/>
-                    <h1 className={styles.title}>Welcome to React</h1>
-                </header>
-                <HomePage />
-                <p className={styles.intro}>
-                    To get started, edit <code>src/App.js</code> and save to reload.
-                </p>
-            </div>
+            <MuiThemeProvider>
+                <div className={styles.App}>
+                    <HomePage />
+                </div>
+            </MuiThemeProvider>
         );
     }
 }

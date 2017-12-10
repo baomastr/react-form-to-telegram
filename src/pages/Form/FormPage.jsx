@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TextField from 'material-ui/TextField';
 import TelegramBotService from "../../services/telegram-bot-service.js";
 
 const Serivce = new TelegramBotService();
@@ -37,16 +38,34 @@ class FormPage extends Component {
         return (
             <div>
                 <form onSubmit={this.onSubmit}>
-
-                    <p><label> Логин: <input type="text" name="login" value={this.state.login}
-                                             onChange={this.onLoginChange}/></label></p>
-
-                    <p><label> Получатель <input type="text" name="recipient" value={this.state.recipient}
-                                             onChange={this.onRecipientChange}/></label></p>
-
-                    <p><label> Текст сообщения: <textarea type="text" name="message" value={this.state.message}
-                                                          onChange={this.onMessageChange}/></label></p>
-
+                    <p>
+                        <TextField
+                            hintText="Логин"
+                            type="text"
+                            name="login"
+                            value={this.state.login}
+                            onChange={this.onLoginChange}
+                        />
+                    </p>
+                    <p>
+                        <TextField
+                            hintText="Получатель"
+                            type="text"
+                            name="recipient"
+                            value={this.state.recipient}
+                            onChange={this.onRecipientChange}
+                        />
+                    </p>
+                    <p>
+                        <TextField
+                            hintText="Текст сообщения"
+                            type="text"
+                            name="message"
+                            value={this.state.message}
+                            onChange={this.onMessageChange}
+                            multiLine={true}
+                        />
+                    </p>
                     <p><input type="submit" value="Submit"/></p>
                 </form>
             </div>
